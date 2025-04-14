@@ -3,152 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kinetic Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Your Kinetic Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
+    /* Global Styles */
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      color: #1a1a1a;
-      background-color: #f9f9f9;
-      scroll-behavior: smooth;
+      padding: 0;
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+      letter-spacing: 0.3px;
+      background: linear-gradient(to bottom right, #f4f4f4, #eaeaea);
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'); /* Subtle noise */
+      background-blend-mode: overlay;
+      color: #222;
     }
-    header {
-      background: url('hero-background.png') no-repeat center center;
-      background-size: cover;
-      color: #fff;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    header img {
-      max-width: 250px;
-      margin-bottom: 1rem;
-      background: rgba(255, 255, 255, 0.85);
-      padding: 0.5rem;
-      border-radius: 8px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      text-shadow: 1px 1px 3px #000;
-    }
-    header p {
-      font-style: italic;
-      font-size: 1.2rem;
-      text-shadow: 1px 1px 2px #000;
-    }
-    nav {
-      background: #111;
-      text-align: center;
-      padding: 1rem;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00bfff;
-    }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 4rem 1rem;
-    }
-    section h2 {
-      color: #007acc;
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
-    }
-    .services p, .projects p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-    .testimonial {
-      background: #efefef;
-      padding: 1.5rem;
-      border-left: 5px solid #007acc;
-      margin-bottom: 1.5rem;
-      font-style: italic;
-    }
-    .contact {
-      font-size: 1.1rem;
-      background: #f0f0f0;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    footer {
-      background: #1a1a1a;
-      color: white;
+
+    header, footer {
+      background-color: #ffffffcc;
       padding: 2rem;
       text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .section {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
     a {
-      color: #007acc;
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Kinetic Solutions Logo" />
-    <!-- <h1>Kinetic Solutions</h1> -->
-    <p>Technology support that moves with you</p>
+    <h1>Your Kinetic Solutions</h1>
+    <p>On-Call IT Support | Smart Solutions | Reliable Execution</p>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <main class="container">
+    <section class="section">
+      <h2>What We Do</h2>
+      <p>
+        We act as your IT department—on call. Whether you're a small business needing full support or an enterprise team looking to delegate overflow tasks, we’re here to help.
+      </p>
+    </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Supportive relationships with our clients are the key to our business. We specialize in crafting solutions that seamlessly align with your operations by understanding your core business, technology needs, and the unique requirements of your users.</p>
-    <p>Reliability, peace of mind, experience, and inventiveness. That's what we bring to the table, and that's why we have clients who've been with us for over 25 years.</p>
-  </section>
+    <section class="section">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Network setup and management</li>
+        <li>Remote support and troubleshooting</li>
+        <li>Custom automation solutions</li>
+        <li>Secure cloud and data storage</li>
+        <li>Website hosting and management</li>
+      </ul>
+    </section>
 
-  <section id="services">
-    <h2>Services</h2>
-    <div class="services">
-      <p><strong>Managed IT Services:</strong> From monitoring to maintenance, we've got your systems covered.</p>
-      <p><strong>Network Design and Deployment:</strong> Fast, secure, and scalable—from setup to optimization.</p>
-      <p><strong>IT Integration Consulting:</strong> We translate your business goals into effective tech solutions.</p>
-      <p><strong>Jargon to English Translation:</strong> Yep. It's a thing. We make tech make sense.</p>
-    </div>
-  </section>
+    <section class="section">
+      <h2>Recent Projects</h2>
+      <p>From tenant directory kiosks to Raspberry Pi-based smart displays, we love to tinker and build reliable, elegant tech. Check out our <a href="#">project gallery</a>.</p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <p>✔️ Custom-built digital directories and kiosks for public and private sectors</p>
-      <p>✔️ Complete network overhaul for a manufacturing firm—from cabling to cloud</p>
-      <p>✔️ Over 25 years of continuous IT partnership with multiple organizations</p>
-    </div>
-  </section>
-
-  <section id="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonials">
-      <div class="testimonial">“It’s not just IT support. Muniz has been an integral part of our company for years.”</div>
-      <div class="testimonial">“Muniz doesn’t just support our computer needs—he understands our business and actively aids in our success.”</div>
-      <div class="testimonial">“He just seems to fix it. I don’t understand it, but I like it.”</div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact">
-      <p>Email: <a href="mailto:support@yourkineticsolutions.com">support@yourkineticsolutions.com</a></p>
-      <p>Phone: <a href="tel:+16046149779">604.614.9779</a></p>
-    </div>
-  </section>
+    <section class="section">
+      <h2>Contact Us</h2>
+      <p>Email us at <a href="mailto:info@yourkineticsolutions.com">info@yourkineticsolutions.com</a> or fill out our <a href="#">contact form</a> to get in touch.</p>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Kinetic Solutions — All rights reserved.</p>
+    <p>&copy; 2025 Your Kinetic Solutions. Built with coffee, clever hacks, and late-night inspiration.</p>
   </footer>
 </body>
 </html>
