@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kinetic Solutions — IT support for Lower Mainland businesses | Muniz Virani</title>
+  <meta name="description" content="25 years of independent IT support for small and mid-sized businesses across Vancouver, North Vancouver, Burnaby, Richmond, Surrey, and Port Coquitlam. Networks, Microsoft 365, projects, and day-to-day support — sized to your business. Call 604.614.9779." />
+  <meta name="author" content="Muniz Virani, Kinetic Solutions" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:title" content="Kinetic Solutions — IT support for Lower Mainland businesses" />
+  <meta property="og:description" content="25 years of independent IT support, sized to your business. Vancouver, North Van, West Van, Burnaby, Richmond, Surrey, Port Coquitlam." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourkineticsolutions.com/" />
+
+  <!-- Local business schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kinetic Solutions",
+    "description": "Independent IT support for small and mid-sized businesses across the Lower Mainland of British Columbia.",
+    "founder": "Muniz Virani",
+    "telephone": "+1-604-614-9779",
+    "email": "support@yourkineticsolutions.com",
+    "url": "https://yourkineticsolutions.com/",
+    "areaServed": [
+      "Vancouver, BC",
+      "North Vancouver, BC",
+      "West Vancouver, BC",
+      "Burnaby, BC",
+      "Richmond, BC",
+      "Surrey, BC",
+      "Port Coquitlam, BC"
+    ],
+    "priceRange": "$$"
+  }
+  </script>
+
+  <!-- Fonts: Fraunces (display serif) + IBM Plex Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =========================================================
+       KINETIC SOLUTIONS — editorial / refined craftsman aesthetic
+       ========================================================= */
+
+    :root {
+      /* Palette — warm paper, deep ink, one rust accent */
+      --paper:        #f5f1ea;
+      --paper-deep:   #ece5d8;
+      --ink:          #1a1714;
+      --ink-soft:     #4a423a;
+      --ink-muted:    #7a6f63;
+      --rule:         #d8cebd;
+      --accent:       #b14a2c;   /* rust / terracotta */
+      --accent-deep:  #8a3820;
+
+      /* Type */
+      --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+      --font-body:    "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      --font-mono:    "IBM Plex Mono", "SF Mono", Menlo, monospace;
+
+      /* Layout */
+      --max:          1200px;
+      --gutter:       clamp(1.25rem, 4vw, 3rem);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Subtle paper grain via layered gradients */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        radial-gradient(ellipse at 20% 10%, rgba(177, 74, 44, 0.04), transparent 50%),
+        radial-gradient(ellipse at 80% 90%, rgba(26, 23, 20, 0.05), transparent 50%);
+    }
+
+    main, header, footer { position: relative; z-index: 1; }
+
+    a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      text-decoration-color: var(--rule);
+      transition: text-decoration-color 0.2s ease, color 0.2s ease;
+    }
+    a:hover { text-decoration-color: var(--accent); color: var(--accent); }
+
+    /* Typography ----------------------------------------------- */
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-style: normal;
+      color: var(--ink);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.5em;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 350;
+      letter-spacing: -0.035em;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      font-weight: 400;
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    p { margin: 0 0 1.1em; max-width: 65ch; }
+
+    .lede {
+      font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+      line-height: 1.55;
+      color: var(--ink-soft);
+      max-width: 60ch;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 1.5em;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    /* Layout containers ---------------------------------------- */
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    section {
+      padding: clamp(4rem, 9vw, 7rem) 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    section:first-of-type { border-top: none; }
+
+    /* Header --------------------------------------------------- */
+
+    .site-header {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--rule);
+      background: var(--paper);
+    }
+
+    .site-header .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .brand {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--ink);
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.55em;
+    }
+
+    .brand-mark {
+      display: inline-block;
+      width: 0.55em;
+      height: 0.55em;
+      background: var(--accent);
+      border-radius: 50%;
+      transform: translateY(-0.05em);
+    }
+
+    .nav {
+      display: flex;
+      gap: clamp(1rem, 2.5vw, 2.25rem);
+      font-size: 0.95rem;
+    }
+    .nav a {
+      text-decoration: none;
+      color: var(--ink-soft);
+      font-weight: 400;
+    }
+    .nav a:hover { color: var(--accent); }
+
+    @media (max-width: 640px) {
+      .nav { display: none; }
+    }
+
+    /* Hero ----------------------------------------------------- */
+
+    .hero {
+      padding: clamp(4rem, 10vw, 8rem) 0 clamp(3rem, 7vw, 5rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero .wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      position: relative;
+    }
+
+    @media (min-width: 900px) {
+      .hero .wrap { grid-template-columns: 1.4fr 1fr; align-items: end; }
+    }
+
+    .hero h1 .accent {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    .hero-meta {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--ink-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .hero-meta span { display: block; }
+
+    /* Oversized watermark K */
+    .watermark {
+      position: absolute;
+      right: -3vw;
+      bottom: -8vw;
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(20rem, 38vw, 42rem);
+      line-height: 0.8;
+      color: var(--paper-deep);
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+      letter-spacing: -0.08em;
+    }
+
+    .hero > .wrap { z-index: 1; }
+
+    /* Contact strip ---------------------------------------------- */
+
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      padding: 1.5rem 0 0;
+      font-size: 1.05rem;
+    }
+
+    .contact-strip a {
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      padding-bottom: 0.15em;
+      border-bottom: 1px solid var(--ink);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .contact-strip a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .contact-strip .label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--ink-muted);
+      margin-right: 0.4em;
+    }
+
+    /* Two-column editorial layout ----------------------------- */
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+    }
+
+    @media (min-width: 900px) {
+      .two-col { grid-template-columns: 1fr 1.6fr; }
+      .two-col.flip { grid-template-columns: 1.6fr 1fr; }
+    }
+
+    .col-head h2 { margin-bottom: 0.3em; }
+
+    /* Services grid -------------------------------------------- */
+
+    .services {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    @media (min-width: 700px) { .services { grid-template-columns: 1fr 1fr; } }
+
+    .service {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      align-items: baseline;
+    }
+
+    @media (min-width: 700px) {
+      .service:nth-child(odd) { padding-right: 2rem; border-right: 1px solid var(--rule); }
+      .service:nth-child(even) { padding-left: 2rem; }
+    }
+
+    .service-num {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      font-weight: 500;
+    }
+
+    .service h3 { margin-bottom: 0.35em; }
+    .service p { color: var(--ink-soft); margin-bottom: 0; font-size: 0.97rem; }
+
+    /* How I work ---------------------------------------------- */
+
+    .principles {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+    }
+    @media (min-width: 800px) { .principles { grid-template-columns: repeat(3, 1fr); } }
+
+    .principle h3 {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-bottom: 0.5em;
+    }
+    .principle p { color: var(--ink-soft); font-size: 0.97rem; }
+
+    /* Testimonials --------------------------------------------- */
+
+    .quotes {
+      display: grid;
+      gap: 3rem;
+      margin-top: 2.5rem;
+    }
+
+    @media (min-width: 900px) {
+      .quotes { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    blockquote {
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    blockquote p {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      line-height: 1.35;
+      font-weight: 350;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin: 0 0 1rem;
+    }
+
+    blockquote::before {
+      content: "“";
+      font-family: var(--font-display);
+      font-size: 4rem;
+      line-height: 0.8;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+    }
+
+    cite {
+      font-style: normal;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    /* Projects ------------------------------------------------- */
+
+    .projects {
+      display: grid;
+      gap: 0;
+      margin-top: 2rem;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 2.25rem 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    @media (min-width: 800px) {
+      .project { grid-template-columns: 1fr 2fr; gap: 3rem; align-items: baseline; }
+    }
+
+    .project:last-child { border-bottom: 1px solid var(--rule); }
+
+    .project h3 { font-style: italic; font-weight: 400; }
+    .project p { color: var(--ink-soft); margin: 0; }
+
+    /* Service area --------------------------------------------- */
+
+    .areas {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.75rem;
+    }
+
+    .areas li {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      padding: 0.4em 0.85em;
+      border: 1px solid var(--rule);
+      border-radius: 100px;
+      color: var(--ink-soft);
+      background: var(--paper);
+    }
+
+    /* Contact section ------------------------------------------ */
+
+    .contact-block {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      margin-top: 2.5rem;
+    }
+
+    @media (min-width: 800px) { .contact-block { grid-template-columns: 1fr 1fr; } }
+
+    .contact-card {
+      padding: 2rem;
+      background: var(--paper-deep);
+      border: 1px solid var(--rule);
+    }
+
+    .contact-card .label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--ink-muted);
+      display: block;
+      margin-bottom: 0.5em;
+    }
+
+    .contact-card .value {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+    }
+    .contact-card .value a { text-decoration: none; color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 0.05em; }
+    .contact-card .value a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* Footer --------------------------------------------------- */
+
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2.5rem 0 3rem;
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+    }
+
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer .colophon {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* Entrance animation --------------------------------------- */
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero .eyebrow,
+    .hero h1,
+    .hero .lede,
+    .hero .contact-strip,
+    .hero-meta {
+      opacity: 0;
+      animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+    }
+
+    .hero .eyebrow      { animation-delay: 0.05s; }
+    .hero h1            { animation-delay: 0.18s; }
+    .hero .lede         { animation-delay: 0.32s; }
+    .hero .contact-strip{ animation-delay: 0.46s; }
+    .hero-meta          { animation-delay: 0.55s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero .eyebrow, .hero h1, .hero .lede, .hero .contact-strip, .hero-meta {
+        opacity: 1;
+        animation: none;
+      }
+      html { scroll-behavior: auto; }
+    }
+
+    /* Skip link (a11y) ----------------------------------------- */
+    .skip {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.75em 1em;
+      z-index: 100;
+    }
+    .skip:focus { left: 0; }
+
+    /* Selection */
+    ::selection { background: var(--accent); color: var(--paper); }
+  </style>
+</head>
+
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a href="#" class="brand" aria-label="Kinetic Solutions home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        Kinetic Solutions
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#how">How I work</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO ============================================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <span class="watermark" aria-hidden="true">K</span>
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Independent IT — est. 2000</p>
+          <h1 id="hero-title">
+            IT support for businesses that just want it&nbsp;<span class="accent">to&nbsp;work.</span>
+          </h1>
+          <p class="lede">
+            I'm Muniz Virani. For 25 years, I've been the IT person for small and mid-sized businesses across the Lower Mainland — the ones too big to run on a consumer router and the family laptop, but too small to need a corporate IT department.
+          </p>
+          <div class="contact-strip">
+            <a href="tel:+16046149779"><span class="label">Call</span>604.614.9779</a>
+            <a href="mailto:support@yourkineticsolutions.com"><span class="label">Email</span>support@yourkineticsolutions.com</a>
+          </div>
+        </div>
+        <aside class="hero-meta" aria-label="At a glance">
+          <span>25 yrs. continuous practice</span>
+          <span>Lower Mainland, BC</span>
+          <span>One person. By design.</span>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT ============================================ -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="wrap two-col">
+        <div class="col-head">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">A practice, not a vendor.</h2>
+        </div>
+        <div>
+          <p>
+            I solve the problem in front of you with tools that fit your business. No bloated contracts. No seat licenses you don't need. No jargon.
+          </p>
+          <p>
+            I run a single-person IT practice, by design. When you call, you get me — the same person who set up your network, who knows your line-of-business software, and who remembers what we tried last time.
+          </p>
+          <p>
+            I work with small and mid-sized businesses in architectural signage, accounting, consulting, and a range of other fields. Most of my clients have been with me for over a decade. Several for more than two.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES ========================================= -->
+    <section id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="two-col">
+          <div class="col-head">
+            <p class="eyebrow">What I do</p>
+            <h2 id="services-title">Range, with depth where it matters.</h2>
+          </div>
+          <p class="lede">
+            A generalist's range — networks, Microsoft 365, custom builds, day-to-day support — backed by 25 years of doing it for real businesses, not slide decks.
+          </p>
+        </div>
+
+        <div class="services" role="list">
+          <article class="service" role="listitem">
+            <span class="service-num">01</span>
+            <div>
+              <h3>Day-to-day IT support</h3>
+              <p>The kind of help you'd get from an in-house IT person, on call when you need it. Phone, email, remote, on-site when the job calls for it.</p>
+            </div>
+          </article>
+
+          <article class="service" role="listitem">
+            <span class="service-num">02</span>
+            <div>
+              <h3>Networks</h3>
+              <p>Design, deployment, troubleshooting, and ongoing care. Ubiquiti and Meraki gear where it fits the room and the budget.</p>
+            </div>
+          </article>
+
+          <article class="service" role="listitem">
+            <span class="service-num">03</span>
+            <div>
+              <h3>Microsoft 365 &amp; cloud</h3>
+              <p>Setup, migration, security settings done right, and ongoing management of the platform most of your business already runs on.</p>
+            </div>
+          </article>
+
+          <article class="service" role="listitem">
+            <span class="service-num">04</span>
+            <div>
+              <h3>Projects</h3>
+              <p>Office moves, new locations, system replacements, and integrations between the tools you already use and don't want to abandon.</p>
+            </div>
+          </article>
+
+          <article class="service" role="listitem">
+            <span class="service-num">05</span>
+            <div>
+              <h3>Custom builds</h3>
+              <p>Digital directories and kiosks, dashboards, and bespoke solutions when an off-the-shelf product doesn't quite fit your situation.</p>
+            </div>
+          </article>
+
+          <article class="service" role="listitem">
+            <span class="service-num">06</span>
+            <div>
+              <h3>Jargon, translated.</h3>
+              <p>Plain-English answers about your own business. So you can make decisions without pretending to understand something nobody explained well.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW I WORK ======================================= -->
+    <section id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="two-col">
+          <div class="col-head">
+            <p class="eyebrow">How I work</p>
+            <h2 id="how-title">Sized to your business. Not someone&nbsp;else's.</h2>
+          </div>
+          <p class="lede">
+            Three principles that have kept clients with me for decades. They're not slogans — they're how the work actually gets done.
+          </p>
+        </div>
+
+        <div class="principles">
+          <div class="principle">
+            <h3>No surprise contracts.</h3>
+            <p>I bill at an hourly rate for the work you actually need. Monthly support arrangements exist when they make sense for your business — and not because a contract demands it.</p>
+          </div>
+          <div class="principle">
+            <h3>No oversized stack.</h3>
+            <p>I bring tools in when they earn their place. A 12-person firm doesn't need the same systems a 1,200-person firm runs on, and I won't pretend otherwise.</p>
+          </div>
+          <div class="principle">
+            <h3>Answered by me.</h3>
+            <p>Phone and email, answered by me. No ticket queue, no tier-one script, no offshore handoff. When I'm away, you'll know in advance and we'll have a plan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS ===================================== -->
+    <section id="testimonials" aria-labelledby="testimonials-title">
+      <div class="wrap">
+        <div class="two-col">
+          <div class="col-head">
+            <p class="eyebrow">In their words</p>
+            <h2 id="testimonials-title">Twenty-five years of saying yes&nbsp;again.</h2>
+          </div>
+          <p class="lede">
+            The longest-running client relationships are now into their third decade. That doesn't happen by accident.
+          </p>
+        </div>
+
+        <div class="quotes">
+          <blockquote>
+            <p>It's not just IT support. Muniz has been an integral part of our company for years.</p>
+            <cite>— Long-time client</cite>
+          </blockquote>
+          <blockquote>
+            <p>Muniz doesn't just support our computer needs — he understands our business and actively aids in our success.</p>
+            <cite>— Long-time client</cite>
+          </blockquote>
+          <blockquote>
+            <p>He just seems to fix it. I don't understand it, but I like it.</p>
+            <cite>— Long-time client</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS ========================================= -->
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="two-col">
+          <div class="col-head">
+            <p class="eyebrow">Selected work</p>
+            <h2 id="projects-title">A quarter-century of finished jobs.</h2>
+          </div>
+          <p class="lede">
+            A sample of the kinds of projects that fill the days between the everyday support calls.
+          </p>
+        </div>
+
+        <div class="projects">
+          <article class="project">
+            <h3>Custom directories &amp; kiosks</h3>
+            <p>Wayfinding directories and interactive kiosks designed and deployed for both public-sector and private-sector clients. Hardware selection, software, content management, deployment, and ongoing support.</p>
+          </article>
+
+          <article class="project">
+            <h3>Full network redesign</h3>
+            <p>End-to-end replacement of aging infrastructure for a manufacturing client — structured cabling, switches, wireless, internet redundancy, and cloud integration — cut over with minimal impact on a live production environment.</p>
+          </article>
+
+          <article class="project">
+            <h3>Multi-decade IT partnerships</h3>
+            <p>Several clients have been with Kinetic Solutions for more than 20 years. Across that span: office moves, hardware refreshes, Microsoft 365 migrations, security upgrades, staff growth, and the day-to-day work of keeping a business running.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT ========================================== -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="two-col">
+          <div class="col-head">
+            <p class="eyebrow">Get in touch</p>
+            <h2 id="contact-title">Call or email — I answer&nbsp;both.</h2>
+          </div>
+          <p class="lede">
+            If you're looking for IT support that fits the business you actually run, I'd like to hear what you're working on. A short note about what you do and what's not working is plenty to get started.
+          </p>
+        </div>
+
+        <div class="contact-block">
+          <div class="contact-card">
+            <span class="label">By phone</span>
+            <p class="value"><a href="tel:+16046149779">604.614.9779</a></p>
+            <p style="margin: 1rem 0 0; color: var(--ink-soft); font-size: 0.95rem;">Monday through Friday during business hours. After-hours availability for existing clients when something can't wait.</p>
+          </div>
+          <div class="contact-card">
+            <span class="label">By email</span>
+            <p class="value"><a href="mailto:support@yourkineticsolutions.com">support@<wbr />yourkineticsolutions.com</a></p>
+            <p style="margin: 1rem 0 0; color: var(--ink-soft); font-size: 0.95rem;">Usually answered the same day, often within the hour during business hours.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 3rem;">
+          <p class="eyebrow" style="margin-bottom: 0.75em;">Service area</p>
+          <ul class="areas">
+            <li>Vancouver</li>
+            <li>North Vancouver</li>
+            <li>West Vancouver</li>
+            <li>Burnaby</li>
+            <li>Richmond</li>
+            <li>Surrey</li>
+            <li>Port Coquitlam</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <strong style="font-family: var(--font-display); font-weight: 500; color: var(--ink);">Kinetic Solutions</strong>
+        &nbsp;— Muniz Virani &nbsp;·&nbsp;
+        <a href="tel:+16046149779" style="color: var(--ink-soft);">604.614.9779</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:support@yourkineticsolutions.com" style="color: var(--ink-soft);">support@yourkineticsolutions.com</a>
+      </div>
+      <div class="colophon">© 2026 — All rights reserved</div>
+    </div>
+  </footer>
+
+</body>
+</html>
